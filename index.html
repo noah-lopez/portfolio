@@ -1,451 +1,312 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Noah's Portfolio</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<title>Noah Lopez</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./modernizr-custom.js"></script>
 </head>
 <body>
-
-	<style>
-		.demo-card-wide.mdl-card {
-  			width: 512px;
-  			margin-left: -256px;
-  			left: 50%;
-		}
-		.demo-card-wide > .mdl-card__title {
-  			color: #fff;
-  			height: 176px;
-  			background: red center / cover;
-		}
-		.demo-card-wide > .mdl-card__menu {
-  			color: #fff;
-		}
-
-		body {
-   			/*background-image: url("./back.jpg");
-   			background-color: #cccccc;*/
-
-   			background:url(./back.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-
-		}
-	</style>
-
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
-      <header class="mdl-layout__header" style="background: transparent; border-bottom: solid; border-color: red; background: transparent; ">
-        <div class="mdl-layout__header-row" style="color:white">
-          <!-- Title -->
-            <span class="mdl-layout-title">Noah Lopez</span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation">
-              <a class="mdl-navigation__link" href="./index.html">Projects</a>
-            </nav>
-            <nav class="mdl-navigation">
-              <a class="mdl-navigation__link" href="./about.html">About</a>
-            </nav>
-        </div>
-      </header>
-    </div>
-
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
-
-  <!-- Section Title  -->
-  <div style="background: transparent; text-align: center;" class="demo-card-wide mdl-card ">
-
-      <div style=" text-align: center; margin-left: -250px; height: 500px; width:500px; top: 45%; left: 50%; font-size:50px; font-family: 'Roboto'; position: absolute; color:white;"> 
-        Current Projects
-      </div>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./hamp.png') center/cover; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Hamptonator</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          In anticipation of BROCKHAMPTON's fourth studio album I created this Covert Art 
-          Generator. The site garnered a ton of traction after being posted on the bands sub
-          reddit. It saw 7k visits and 3k downloads in its first 24 hours!
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> JAVASCRIPT, HTML, CSS AND NODE.JS </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('http://www.hamptonator.com')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div>
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./raytrace.png') center; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Raytracing FPS</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          This FPS game utilizing principles raytracing for its raygun blast mechanics.
-          In the game your raygun has three different  modes: diffuse, glass and mirror.
-          Similarly, the enemies are coated in three different materials: diffuse, glass and mirror.
-          When you blast an enemy coated in the material that is the same as you current rayguns mode you can destroy it.
-          However, if the material and raygun mode do not match, the blast from the raygun will be reflected according the materials brdf. 
-          To win the game simply defeat the all enemies and collected the green suitcase in 60 seconds
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> JAVASCRIPT, HTML, CSS AND THREE.JS </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('https://noah-lopez.github.io/final-proj/')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div>
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./caesar.png') center / cover; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Caesar Cipher Encoder/Decoder</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          I built a site that can encode an decode messages using the Caesar Cipher.
-          This simple algorithim was my first introduction to cryptography and I have been hooked ever since.
-          I hope new cryptographers will stumble across the site and fall in love like I did.
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> JAVASCRIPT, HTML, CSS AND NODE.JS </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <!-- <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('http://caesarcipher.net')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div> -->
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./fpa.png') center / cover ; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Film Point Average</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          Film Point Average is a site that aims to legitimize online audience reaction to new films by only allowing one vote per connection to the site for a specific film.
-          Films are given a grade on a 4.0 scale {i.e. A, A+ = 4.0, A- = 3.7, B+ = 3.3 etc.} based on user input.
-          A films grade is then incorporated into the calculations for its respective cast/crew members Film Point Averages.
-
-          In the future, an upcoming films cast/crew members Film Point Averages will be used to predict its audience reaction.
-
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> JAVASCRIPT, JQUERY, HAML, SASS AND RUBY ON RAILS </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <!-- <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('https://noah-lopez.github.io/final-proj/')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" > Check it Out!</button>
-        </div> -->
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div style="background: transparent; text-align: center;" class="demo-card-wide mdl-card ">
-      <div style=" text-align: center; margin-left: -250px; height: 500px; width:500px; top: 45%; left: 50%; font-size:50px; font-family: 'Roboto'; position: absolute; color:white;"> 
-        Selected UI Projects
-      </div>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./rc.png') center / cover; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Region Color</h2>
-      </div>
-
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px">
-          Region Color is an interaction I designed for a web based coloring book. It enables users to quickly fill in regions of a picture by selecting a color and draging over said regions. For further details check out my design doc below!
-
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('./p2.pdf')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;"> Design Doc</button>
-
-          <button onclick="linkTo('https://www.youtube.com/watch?v=0cpK-MMmRS0&feature=youtu.be')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div>
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./p3.png') center / cover; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Proxemic Mirror </h2>
-      </div>
-
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px">
-          Proxemic mirror is a product I designed to aid a sculptor during their artistic process. It won a design award in my User Interface Design course at UC Berkeley. For further details check out my design doc below!
-
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('./p3.pdf')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;"> Design Doc</button>
-
-          <button onclick="linkTo('https://www.youtube.com/watch?v=v_g61lykBDU')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div>
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./p4.png') center / cover; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Power Up! </h2>
-      </div>
-
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px">
-          Power up is a mobile fitness app I designed with a comic book twist. For further details check out my design doc below!
-
-
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('./p4.pdf')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;"> Design Doc</button>
-
-          <button onclick="linkTo('https://www.youtube.com/watch?v=2y4FhJgK0ak')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  style="background: transparent; border-style: solid; border-color: red;"> Check it Out!</button>
-        </div>
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div style="background: transparent; text-align: center;" class="demo-card-wide mdl-card ">
-
-      <div style=" text-align: center; margin-left: -250px; height: 500px; width:500px; top: 45%; left: 50%; font-size:50px; font-family: 'Roboto'; position: absolute; color:white;"> 
-        GAMES!
-      </div>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./ants.png') center / cover; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Ants vs. SomeBees</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          Ants vs. SomeBees is a python Plants vs. Zombies Clone. In the game the player is given a variety of  different Ants (i.e. thrower, defense etc.) and is tasked with vanquishing all those pesky bees. 
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> PYTHON </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <!-- <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('https://noah-lopez.github.io/final-proj/')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div> -->
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./bc.png') center ; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Bomb Checkers!</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          Bomb Checkers! is a java based checkers game with a twist. When a bomb piece jumps over an opponents piece it takes not only captures the jumped piece but also those in the 5x5 square  around it, with the exception that shield pieces are protected from the explosions.
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> JAVA </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <!-- <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('https://noah-lopez.github.io/final-proj/')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div> -->
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <div class="demo-card-wide mdl-card" style="background: transparent; border-style: solid; border-color: red;">
-
-      <!-- TITLE OF WORK + IMG HERE -->
-      <div class="mdl-card__title" style="background: url('./fire.png') center /cover ; text-shadow: 0 0 10px red; border-style: solid; border-color: red;">
-        <h2 class="mdl-card__title-text">Fire!</h2>
-      </div>
-
-      <!-- DESCRIPTION HERE -->
-
-      <form onsubmit="return false">
-        <div class="mdl-card__supporting-text" style= "color: white; font-size: 20px;">
-          Suitcase is a javascript/jQuery/HTML remake of the classic Nintendo Game and Watch game "Fire!" Help the boys get ready for vacation by moving their suitcases from their apartment to the car. Make sure you don't drop any cases though! 
-        </div>
-
-
-        <!-- BUILT WITH HERE -->
-
-        <div class="mdl-card__actions mdl-card--border" style = "color:white;"align="center">
-        <b> --BUILT WITH-- <br> JAVASCRIPT, JQUERY, CSS AND HTML </b>
-        </div>
-
-        <!-- LINK TO WORK -->
-
-        <!-- <div class="mdl-card__actions mdl-card--border" align="center">
-          <button onclick="linkTo('https://noah-lopez.github.io/final-proj/')" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background: transparent; border-style: solid; border-color: red;" > Check it Out!</button>
-        </div> -->
-    </form>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-
-<script>
-  function linkTo(link) {
-    window.location = link;
-  }
-</script>
-
-
-
+	<ul>
+  		<li><a href="./index.html">About</a></li>
+  		<span></span>
+  		<li><a href="./work.html">Work</a></li>
+  		<li><a href="./resume.pdf">Resume</a></li>
+	</ul>
+
+
+	<div style="display:grid" id = holder>
+
+		
+
+		<div style= "background-color: #333;"  class="textdiv animated bounceInDown">
+			<p class="line anim-typewriter"> hello world!</p>
+		</div>
+
+		<div style= "background-image: url(back2.gif); background-repeat:no-repeat;
+   		background-size:cover;"  class="textdiv">
+
+		</div>
+
+		<div style= "color: lime" class="textdiv revealOnScroll" data-animation="bounceInUp">
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 15%;
+				font-size: 42px;
+				"
+			>
+			my name is noah and I am a
+			</div>
+
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 40%;
+				font-size: 75px;
+				"
+			>
+			FULL STACK <br> software engineer
+			</div>
+		</div>
+
+		<div style= "background-image: url(back1.gif); background-repeat:no-repeat;
+   		background-size:cover;"  class="textdiv">
+
+   		</div>
+
+		<div style= "color: lime" class="textdiv revealOnScroll" data-animation="bounceInUp">
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 15%;
+				font-size: 42px;
+				"
+			>
+			who graduated from 
+			</div>
+
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 40%;
+				font-size: 50px;
+				"
+			>
+			UC BERKELEY<br>with a degree in<br>
+			computer science<br> <br> 3.295 GPA
+			</div>
+
+		</div>
+
+		<div style= "background-image: url(back3.gif); background-repeat:no-repeat;
+   		background-size:cover;"  class="textdiv">
+
+		</div>
+
+		<div style= "color: lime" class="textdiv revealOnScroll" data-animation="bounceInUp">
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 15%;
+				font-size: 42px;
+				"
+			>
+			i know how to use
+			</div>
+
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 40%;
+				font-size: 50px;
+				"
+			>
+			Ruby Java Python<br> SQL C C++<br> HTML JavaScript CSS <br>
+			Agile Rails Node.js MongoDB
+			</div>
+
+		</div>
+		<div style= "background-image: url(back4.gif); background-repeat:no-repeat;
+   		background-size:cover;"  class="textdiv">
+
+   		</div>
+
+		<div style= "color: lime" class="textdiv revealOnScroll" data-animation="tada">
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 15%;
+				font-size: 42px;
+				"
+			>
+			i would love to work
+			</div>
+
+			<div 
+				style="position:absolute; 
+				background-color: transparent; 
+				width: 100%; 
+				height: auto;
+				text-align: center;
+				left: 0px;
+				top: 40%;
+				font-size: 125px;
+				"
+			>
+			WITH YOU
+			</div>
+
+		</div>
+
+
+	</div>
 </body>
+
+
+
+<style>
+
+	body {
+	    background-color: lime;
+	}
+	ul {
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+    	background-color: #333;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 5%;
+    	z-index: 10;
+    	display: inline-block;
+    	font-family: menlo;
+    	border-bottom: 3px solid lime;
+	}
+
+	li {
+    	float: left;
+    	height: 100%;
+    	width: 10%;
+    	left: 5px;
+    	font-size: 170%;
+    	position: relative;
+    	top: 22%;
+	}
+
+	li a {
+    	display: block;
+    	color: white;
+    	text-align: center;
+    	height: 100%;
+    	text-decoration: none;
+    	position: absolute;
+    	width: 100%;
+    	color: lime;
+	}
+
+	#holder {
+  		/*top: 100px;*/
+  		width: 100%;
+  		height:auto;
+  		left: 0;
+  		background: transparent;
+  		position: absolute;
+  		grid-template-columns: auto;
+  		top:5%;
+	}
+
+	.textdiv {
+		/*background-color: rgba(255, 255, 255, 0.8);*/
+  		padding: 20px;
+  		font-size: 30px;
+  		text-align: center;
+  		height: 500px;
+  		font-family: 'menlo';
+  		color:lime;
+  		position: relative;
+	}
+
+
+	.line {
+      position: relative;
+      top: 50%;
+      width: 4em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;transform: translateY(-50%);
+  	  font-size: 65px !important;
+	}
+ 
+ 
+	.anim-typewriter {
+	      animation: typewriter 2s steps(20) 1s 1 normal both,
+	      blinkTextCursor 500ms steps(20) infinite normal;
+	}
+	 
+	@keyframes typewriter {
+	      from {
+	            width: 0;
+	      }
+	      to {
+	            width: 7em;
+	      }
+	}
+	 
+	@keyframes blinkTextCursor {
+	      from {
+	            border-right-color: rgba(255, 255, 255, 0.75);
+	      }
+	      to {
+	            border-right-color: transparent;
+	      }
+	}
+</style>
+
+
+<script> 
+	var $window = $(window),
+    win_height_padded = $window.height() * 1.1,
+    isTouch           = Modernizr.touch
+
+    $window.on('scroll', revealOnScroll);
+
+	function revealOnScroll() {
+    	var scrolled = $window.scrollTop();
+    	$(".revealOnScroll:not(.animated)").each(function () {
+      		var $this     = $(this),
+          	offsetTop = $this.offset().top;
+
+      		if (scrolled + win_height_padded > offsetTop) {
+        		if ($this.data('timeout')) {
+          			window.setTimeout(function(){
+            		$this.addClass('animated ' + $this.data('animation'));
+            		$this.css("background-color", "#333");
+            		$this.css("color", "lime");
+          		}, parseInt($this.data('timeout'),10));
+        		} else {
+          			$this.addClass('animated ' + $this.data('animation'));
+          			$this.css("background-color", "#333");
+          			$this.css("color", "lime");
+        		}
+      		}
+   		 });
+    }
+
+
+</script>
 </html>
