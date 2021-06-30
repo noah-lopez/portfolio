@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sphere Sphere Intersection</title>
+    </head>
+    <body onload="main()" style="margin:0; overflow: hidden">
+        
+        
+        <canvas id="c"> </canvas>
+        
+
+        <script type="text/javascript" src="three.min.js"> </script>
+        <script language="javascript">
+            window.onresize = function(){ location.reload(); }
+            
+            
+            function main() {
+
+
+                const canvas = document.querySelector("#c");
+                
+                var dimension = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+                canvas.width = dimension[0];
+                canvas.height = dimension[1];
+                
+                const renderer = new THREE.WebGLRenderer({canvas});
+
+                const fov = 75;
+                const aspect = 2;
+                const near = 5;
+                const far = 25;
+                const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+                
+                camera.position.z = 25;
+
+                const scene = new THREE.Scene();
+
+
+                geometry = new THREE.SphereGeometry( 6, 30 , 30);
+                material = new THREE.MeshBasicMaterial({color: "red", wireframe:true})
+
+                geometry2 = new THREE.SphereGeometry( 6 , 30 , 30);
+                material2 = new THREE.MeshBasicMaterial({color: "red", wireframe:true})
+
+                sphere1 = new THREE.Mesh(geometry, material)
+                sphere2 = new THREE.Mesh(geometry2, material2)
+
+
+
+                scene.add(sphere1)
+                scene.add(sphere2)
+
+                sphere1.position.x = 2
+
+
+                renderer.render(scene, camera);
+
+                moveRight1 = true
+                moveUp1 = true
+                moveRight2 = false
+                moveUp2 = false
+                yShift1 = (Math.random() * (.1-.08) + .08)
+                yShift2 = (Math.random() * (.1-.08) + .08)
+
+                function render(time) {
+                    time *= 0.001;
+
+                    sphere1.rotation.x = time
+                    sphere1.rotation.y = time
+
+                    sphere2.rotation.x = time
+                    sphere2.rotation.y = time
+
+                    dirS1ToS2 = sphere2.position.clone().sub(sphere1.position)
+
+                    
+                    
+                    if (dirS1ToS2.x*dirS1ToS2.x+dirS1ToS2.y*dirS1ToS2.y+dirS1ToS2.z*dirS1ToS2.z <= (sphere1.geometry.parameters.radius + sphere2.geometry.parameters.radius) * (sphere1.geometry.parameters.radius + sphere2.geometry.parameters.radius)) {
+                        sphere1.material.color.set("green")
+                        sphere2.material.color.set("green")
+                    } else{
+                        sphere1.material.color.set("red")
+                        sphere2.material.color.set("red")
+                    }
+
+                    
+                    if (sphere1.position.x >= 40) {
+                        moveRight1 = false
+                    }
+
+                    if (sphere1.position.x <= -40) {
+                        moveRight1 = true
+                        yShift1 = (Math.random() * (.1-.08) + .08)
+                    }
+
+                    if (sphere1.position.y >= 20) {
+                        moveUp1 = false
+                        yShift1 = (Math.random() * (.1-.08) + .08)
+                    }
+
+                    if (sphere1.position.y <= -20) {
+                        moveUp1 = true
+                    }
+
+                    if (moveRight1) {
+                        sphere1.position.x = sphere1.position.x+.1
+                    } else {
+                        sphere1.position.x = sphere1.position.x-.1
+                    }
+
+                    if (moveUp1) {
+                        sphere1.position.y = sphere1.position.y+yShift1
+                    } else {
+                        sphere1.position.y = sphere1.position.y-yShift1
+                    }
+
+
+
+                    if (sphere2.position.x >= 40) {
+                        moveRight2 = false
+                    }
+
+                    if (sphere2.position.x <= -40) {
+                        moveRight2 = true
+                        yShift2 = (Math.random() * (.1-.08) + .08)
+                    }
+
+                    if (sphere2.position.y >= 20) {
+                        moveUp2 = false
+                        yShift2 = (Math.random() * (.1-.08) + .08)
+                    }
+
+                    if (sphere2.position.y <= -20) {
+                        moveUp2 = true
+                    }
+
+                    if (moveRight2) {
+                        sphere2.position.x = sphere2.position.x+.1
+                    } else {
+                        sphere2.position.x = sphere2.position.x-.1
+                    }
+
+                    if (moveUp2) {
+                        sphere2.position.y = sphere2.position.y+yShift2
+                    } else {
+                        sphere2.position.y = sphere2.position.y-yShift2
+                    }
+
+                    renderer.render(scene, camera);
+
+                    requestAnimationFrame(render);
+                }
+
+                requestAnimationFrame(render);
+
+
+
+            }          
+        </script>
+    </body>
+</html>
